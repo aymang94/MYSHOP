@@ -80,6 +80,10 @@ export class AddEditProductComponent implements OnInit {
     }
   }
 
+  closeModal() {
+    this.modalService.closeAllDialogs();
+  }
+
   addProduct(product: Product) {
     this.productService.addProduct(product).pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(res => {

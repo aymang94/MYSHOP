@@ -6,8 +6,9 @@ import { Product } from '../../../models/data-model.model';
 })
 export class DataService {
 
-  /*     Work around
-      Using this data.service to cache productList Here to simulate UI changes on list,
+  /*         Simulate BE Logic  (as Fake APIs Returns Static Data)
+
+      Using this data.service to cache productList Here and update it so can simulate UI changes on list,
       as getProducts API returns same static data & the CRUD operation (add & edit & delete)
       will not affect products list.
       (static array added in 'https://fakestoreapi.com/products') 

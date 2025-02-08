@@ -14,7 +14,7 @@
         </div>
 
         <div class="actions m-t-20 d-flex">
-            <button class="btn btn-outline-secondary"> Cancel </button>
+            <button class="btn btn-outline-secondary" (click)="closeModal()"> Cancel </button>
             <button class="btn btn-secondary text-white" [disabled]="form.invalid" (click)="submit()" *ngIf="!editMode"> Submit </button>
             <button class="btn btn-secondary text-white" [disabled]="form.invalid || form.pristine" (click)="submit()" *ngIf="editMode"> Update </button>
         </div>
