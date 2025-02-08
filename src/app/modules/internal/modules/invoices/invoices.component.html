@@ -1,0 +1,34 @@
+<div class="invoice-page-wrapper h-100 p-e-30 p-s-30 p-md-0">
+
+    <div class="title d-flex align-items-center text-success">
+        <span class="icon icon-invoice fs-22"></span>
+        <div class="fs-20 m-s-6 m-t-2 fw-bold tajawal-font"> Create New Invoice </div>
+    </div> 
+
+    <div class="invoice">
+        <form class="items-form p-e-20 p-t-10 w-md-100 p-md-e-0" [formGroup]="form">
+
+            <div formArrayName="products">
+                <div class="item w-100 d-flex justify-content-end justify-content-lg-between flex-lg-nowrap" *ngFor="let productCtrl of getProductsArray(form)?.controls; let index = index" [formGroupName]="index">
+                    <div class="w-75 w-md-100 gap-3 d-flex align-items-center">
+                        <div class="products-dp w-75">
+                            <app-dropdown [label]="'Select Product'" [options]="products" [identifier]="'id'" [value]="'title'" formControlName="productId"></app-dropdown>
+                        </div>
+                        <div class="quantity w-md-25">
+                            <app-input [type]="'number'" [placeholder]="'Quantity'" formControlName="quantity" [secondaryStyle]="true"></app-input>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="icon icon-add fs-20 m-e-10 m-t-2 cursor-pointer" (click)="addProduct()" *ngIf="index+1 === getProductsArray(form).controls?.length"></span>
+                        <span class="icon icon-delete fs-20 cursor-pointer m-md-e-10" (click)="removeProduct(index)" [ngClass]="{'dimmed': (getProductsArray(form).controls.length) === 1}" ></span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions w-100 d-flex justify-content-end m-md-t-30">
+                <button class="btn btn-secondary w-md-100 text-white" [disabled]="form.invalid" (click)="submit()"> Submit </button>
+            </div>
+        </form>
+    </div>
+</div>

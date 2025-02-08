@@ -1,0 +1,32 @@
+
+.external-wrapper {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+
+    .app-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .app-name-logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+    
+            .icon {
+                font-size: 4rem;
+            }
+            .name {
+                font-size: 4rem;
+            }
+        }
+    }
+    
+
+    .external-body {
+        flex-grow: 1;
+    }
+}

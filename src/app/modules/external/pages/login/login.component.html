@@ -1,0 +1,16 @@
+<div class="login-wrapper h-100 m-0-auto w-md-100">
+
+   <div class="title fs-24 text-white cairo-semibold-font"> Login </div> 
+
+   <form class="login-form" [formGroup]="loginForm">
+    <app-input [type]="'text'" [placeholder]="'Username'" formControlName="username"></app-input>
+    <app-input [type]="'password'" [placeholder]="'Password'" formControlName="password"></app-input>
+
+    <div class="actions w-100 m-t-30">
+        <button class="btn btn-secondary w-100 m-b-10" [disabled]="loginForm.invalid" (click)="login()"> login </button>
+        <button class="btn btn-outline-secondary w-100 d-lg-none d-md-block"> Register </button>
+        <button class="btn btn-primary reset">Reset Password</button>
+    </div>
+   </form>
+
+</div>

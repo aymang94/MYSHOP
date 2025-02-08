@@ -1,0 +1,25 @@
+<div class="home-wrapper h-100">
+    <div class="actions-wrapper w-50 w-md-100 m-0-auto">
+
+        <div class="action-card products w-lg-100" (click)="navTo(ROUTES.PRODUCTS)">
+            <span class="icon icon-shopping-bag"></span>
+            <div class="label">Products</div>
+            <div class="desc">
+                Browse product list, Create new product & Edit/ Delete products.
+            </div>
+        </div>
+
+        <div class="action-card add-invoice w-lg-100" (click)="navTo(ROUTES.INVOICES)">
+            <div class="d-flex align-items-center">
+                <span class="fs-50">+</span>
+                <span class="icon icon-invoice"></span>
+            </div>
+            
+            <div class="label">Add Invoice</div>
+            <div class="desc text-info-02">
+                Create and save new invoices Here.
+            </div>
+        </div>
+
+    </div>
+</div>

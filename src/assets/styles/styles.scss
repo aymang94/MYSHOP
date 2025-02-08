@@ -1,0 +1,11 @@
+
+@use '@angular/material' as mat;
+@include mat.core();
+@import "colors.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "global.scss";
+@import "spacing.scss";
+@import "responsive.scss";
+@import "typography.scss";
+
+

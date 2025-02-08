@@ -1,0 +1,68 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'cairoFont';
+}
+
+.tajawal-font {
+    font-family: 'tajawalFont' !important;
+}
+.tajawal-semibold-font {
+    font-family: 'tajawalMediumFont' !important;
+}
+
+.cairo-semibold-font {
+    font-family: 'cairoMediumFont' !important;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    width: 100vw;
+}
+
+/*    CURSORS    */
+.cursor-pointer {
+    cursor: pointer;
+}
+.cursor-default {
+    cursor: default;
+}
+
+/*    SCROLL BAR STYLING    */
+div::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: #e4e4e4;
+}
+
+
+.m-0-auto {
+    margin: 0 auto;
+}
+
+/* MAT Select */
+.mat-mdc-select-panel {
+    background-color: white !important;
+}
+
+/* sweet alert */
+.swal2-title {
+    font-size: 20px;
+}
+.swal2-icon {
+    font-size: 0.8rem;
+}
+.swal2-html-container {
+    font-size: 16px;
+}
+
+/* MAT Spinner */
+.mdc-circular-progress__indeterminate-circle-graphic {
+    stroke: #253a61 !important;
+}

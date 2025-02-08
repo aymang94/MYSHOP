@@ -1,0 +1,9 @@
+<div class="main-container">
+    <router-outlet></router-outlet>
+
+    <!-- SPINNER -->
+    <div class="spinner-wrapper" *ngIf="globalService.showSpinner">
+        <mat-spinner class="spinner" [mode]="'indeterminate'" [color]="'primary'" ></mat-spinner>
+    </div>
+
+</div>

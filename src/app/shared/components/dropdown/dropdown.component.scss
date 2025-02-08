@@ -1,0 +1,15 @@
+@import "../../../../assets/styles/colors.scss";
+
+.wrapper {
+    height: 45px;
+    border: 1px solid $secondary;
+    border-radius: 8px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .label {
+        position: absolute;
+        left: 10px;
+    }
+}

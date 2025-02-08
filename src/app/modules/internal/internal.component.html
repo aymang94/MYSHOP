@@ -1,0 +1,21 @@
+<div class="page-wrapper h-100 p-md-20">
+
+    <div class="page-header">
+        <div class="app-name text-primary cursor-pointer" [routerLink]="'/' + ROUTES.INTERNAL">
+            <span class="icon icon-store fs-32"></span>
+            <span class="m-s-8 fs-30 fw-bold">MYSHOP</span>
+        </div>
+        <div class="tabs d-lg-flex d-none" *ngIf="!router.url.includes('home')">
+            <div class="tab" [routerLink]="'/' + ROUTES.INTERNAL">Home</div>
+            <div class="tab" [routerLink]="'/' + ROUTES.INTERNAL + '/' + ROUTES.PRODUCTS">Products</div>
+            <div class="tab" [routerLink]="'/' + ROUTES.INTERNAL + '/' + ROUTES.INVOICES">Add Invoice</div>
+        </div>
+        <button class="btn btn-outline-primary fs-14 d-none d-lg-block" (click)="logout()"> Logout </button>
+        <span class="icon icon-logout fs-30 d-lg-none d-md-block" (click)="logout()"></span>
+    </div>
+
+    <div class="page-body">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

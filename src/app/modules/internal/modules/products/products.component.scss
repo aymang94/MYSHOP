@@ -1,0 +1,19 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.products-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    .title-add-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .products-list {
+        flex-grow: 1;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin-top: 20px;
+    }
+
+}

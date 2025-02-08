@@ -1,0 +1,78 @@
+
+
+@include media-breakpoint-down(md) {
+    $i: 2;
+    @while $i <=100 {
+        .w-md-#{$i} {
+            width: #{$i + '%'} !important;
+        }
+
+        $i: $i + 2;
+    }
+    $i: 2;
+    @while $i <=100 {
+        .h-md-#{$i} {
+            height: #{$i + '%'} !important;
+        }
+
+        $i: $i + 2;
+    }
+
+    // Margins md
+    @include generate-margins-paddings(".m-md-", "margin");
+    @include generate-margins-paddings(".m-md-t-", "margin-top");
+    @include generate-margins-paddings(".m-md-b-", "margin-bottom");
+    @include generate-margins-paddings(".m-md-s-", "margin-inline-start");
+    @include generate-margins-paddings(".m-md-e-", "margin-inline-end");
+    @include generate-margins-paddings(".m-md-y-", "margin-block");
+
+    // Paddings md
+    @include generate-margins-paddings(".p-md-", "padding");
+    @include generate-margins-paddings(".p-md-t-", "padding-top");
+    @include generate-margins-paddings(".p-md-b-", "padding-bottom");
+    @include generate-margins-paddings(".p-md-s-", "padding-inline-start");
+    @include generate-margins-paddings(".p-md-e-", "padding-inline-end");
+
+
+    .md-hide {
+        display: none !important;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    $i: 2;
+    @while $i <=100 {
+        .w-lg-#{$i} {
+            width: #{$i + '%'} !important;
+        }
+
+        $i: $i + 2;
+    }
+    $i: 2;
+    @while $i <=100 {
+        .h-lg-#{$i} {
+            height: #{$i + '%'} !important;
+        }
+
+        $i: $i + 2;
+    }
+
+    // Margins lg
+    @include generate-margins-paddings(".m-lg-", "margin");
+    @include generate-margins-paddings(".m-lg-t-", "margin-top");
+    @include generate-margins-paddings(".m-lg-b-", "margin-bottom");
+    @include generate-margins-paddings(".m-lg-s-", "margin-inline-start");
+    @include generate-margins-paddings(".m-lg-e-", "margin-inline-end");
+    @include generate-margins-paddings(".m-lg-y-", "margin-block");
+
+    // Paddings lg
+    @include generate-margins-paddings(".p-lg-", "padding");
+    @include generate-margins-paddings(".p-lg-t-", "padding-top");
+    @include generate-margins-paddings(".p-lg-b-", "padding-bottom");
+    @include generate-margins-paddings(".p-lg-s-", "padding-inline-start");
+    @include generate-margins-paddings(".p-lg-e-", "padding-inline-end");
+
+    .lg-hide {
+        display: none !important;
+    }
+}

@@ -1,0 +1,13 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    
+    .actions {
+        gap: 1rem;
+        button {
+            flex-grow: 1;
+        }
+    }
+}

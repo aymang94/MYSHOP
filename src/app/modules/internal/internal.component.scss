@@ -1,0 +1,39 @@
+@import "../../../assets/styles/colors.scss";
+.page-wrapper {
+    
+    padding: 20px 68px;
+    display: flex;
+    flex-direction: column;
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 14px;
+        border-bottom: 1px solid $light-grey;
+
+        .app-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .tabs {
+            width: 25%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-top: 10px;
+            .tab {
+                font-size: 15px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .page-body {
+        height: calc(100% - 50px);
+        padding-top: 40px;
+    }
+
+}

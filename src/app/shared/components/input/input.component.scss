@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/colors.scss';
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+
+    &.secondary {
+        border: 1px solid $secondary;
+        color: $primary;
+    }
+}
+input::placeholder {
+    color: $info-02;
+}

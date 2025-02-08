@@ -1,0 +1,28 @@
+$max: 40;
+$offset: 2;
+$unit: "px";
+
+@mixin generate-margins-paddings($className, $property) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} {
+      #{$property}: #{$i + $unit} !important;
+    }
+    $i: $i + $offset;
+  }
+}
+
+// Margins
+@include generate-margins-paddings(".m-", "margin");
+@include generate-margins-paddings(".m-t-", "margin-top");
+@include generate-margins-paddings(".m-b-", "margin-bottom");
+@include generate-margins-paddings(".m-s-", "margin-inline-start");
+@include generate-margins-paddings(".m-e-", "margin-inline-end");
+@include generate-margins-paddings(".m-y-", "margin-block");
+
+// Paddings
+@include generate-margins-paddings(".p-", "padding");
+@include generate-margins-paddings(".p-t-", "padding-top");
+@include generate-margins-paddings(".p-b-", "padding-bottom");
+@include generate-margins-paddings(".p-s-", "padding-inline-start");
+@include generate-margins-paddings(".p-e-", "padding-inline-end");

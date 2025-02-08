@@ -1,0 +1,21 @@
+<div class="products-page-wrapper h-100 p-e-30 p-s-30 p-md-0">
+
+    <div class="title-add-wrapper">
+
+        <div class="title d-flex align-items-center text-success">
+            <span class="icon icon-shopping-bag fs-22"></span>
+            <div class="fs-20 m-s-6 m-t-4 fw-bold tajawal-font"> Products </div>
+        </div> 
+
+        <button class="btn btn-success text-white fs-14 d-flex align-items-center" (click)="openAddProduct()">
+            <span class="m-e-4">+ </span>
+            <span>Add Product</span>
+        </button>
+
+    </div>
+    
+    <div class="products-list">
+        <app-products-list [products]="products"></app-products-list>
+    </div>
+
+</div>

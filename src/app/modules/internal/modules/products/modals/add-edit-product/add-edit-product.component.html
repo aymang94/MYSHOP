@@ -1,0 +1,22 @@
+<app-modal [header]="editMode ? 'Edit Product': 'Add Product'">
+    <form [formGroup]="form" class="m-t-20">
+        <div>
+            <app-dropdown [label]="'Select Category'" [options]="categories" formControlName="category"></app-dropdown>
+        </div>
+        <div>
+            <app-input [type]="'text'" [placeholder]="'Title'" formControlName="title" [secondaryStyle]="true"></app-input>
+        </div>
+        <div>
+            <app-input [type]="'text'" [placeholder]="'Description'" formControlName="description" [secondaryStyle]="true"></app-input>
+        </div>
+        <div>
+            <app-input [type]="'number'" [placeholder]="'Price'" formControlName="price" [secondaryStyle]="true"></app-input>
+        </div>
+
+        <div class="actions m-t-20 d-flex">
+            <button class="btn btn-outline-secondary"> Cancel </button>
+            <button class="btn btn-secondary text-white" [disabled]="form.invalid" (click)="submit()" *ngIf="!editMode"> Submit </button>
+            <button class="btn btn-secondary text-white" [disabled]="form.invalid || form.pristine" (click)="submit()" *ngIf="editMode"> Update </button>
+        </div>
+    </form>
+</app-modal>

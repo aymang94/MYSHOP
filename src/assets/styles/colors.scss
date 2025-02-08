@@ -1,0 +1,49 @@
+$primary: #253a61;
+$primary-02: rgb(53, 85, 141);
+
+$secondary: #62C1A1;
+$light-blue: #EDF8FD;
+$light-grey: #eee;
+$light-green: #DFF1EA;
+
+$warning: #FFBB38;
+$error: #DF1642;
+
+$info: #969696;
+$info-02: #868686;
+$success: #18A957;
+
+$border-color: #e0e0e0;
+
+$white: #FFFFFF;
+
+
+$main-colors: (
+    primary: $primary,
+    primary-02: $primary-02,
+    secondary: $secondary,
+    warning: $warning,
+    error: $error,
+    info: $info,
+    info-02: $info-02,
+    success: $success,
+    white: $white,
+    light-blue: $light-blue,
+    light-green: $light-green,
+    light-grey: $light-grey
+);
+
+
+@each $color-name,
+$color-value in $main-colors {
+  .text-#{"" + $color-name} {
+    color: $color-value !important;
+  }
+  .bg-#{"" + $color-name} {
+    background-color: $color-value !important;
+  }
+}
+
+/* Overriding bootstrap variables */
+
+$secondary: #61c2a1;

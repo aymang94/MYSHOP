@@ -1,0 +1,10 @@
+<div class="wrapper w-100">
+    <div class="label w-100" *ngIf="!selectedValue"> {{ label }} </div>
+    <mat-select #matSelect [formControl]="selectListControl" (blur)="markAsTouched()"
+        (selectionChange)="onSelectChange($event)" class="w-100 text-primary">
+        <mat-option *ngFor="let option of options" [value]="option[identifier]">
+            {{ option[value] }}
+        </mat-option>
+    </mat-select>
+        <!-- Validations ERRORS Here -->
+</div>

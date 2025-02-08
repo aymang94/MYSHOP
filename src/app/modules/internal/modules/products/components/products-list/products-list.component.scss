@@ -1,0 +1,53 @@
+@import "../../../../../../../assets/styles/colors.scss";
+
+.list-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 60px;
+    .product {
+        border: 1px solid $border-color;
+        border-radius: 2px;
+        width: 24%;
+        padding: 20px;
+        min-width: 300px;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .info-actions-wrapper {
+            .title {
+                font-size: 14px;
+                color: $primary-02;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .desc {
+                font-size: 12px;
+                height: 36px;
+                color: $info-02;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            
+            .price {
+                font-size: 14px;
+                font-weight: bold;
+                color: $success;
+            }
+        }
+    }
+
+}
